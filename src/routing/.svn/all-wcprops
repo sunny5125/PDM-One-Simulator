@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/netsci/!svn/ver/6450/experimentation/src/trunk/diversity-caching/One-BBN/src/routing
+END
+PassiveRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/netsci/!svn/ver/6788/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/PassiveRouter.class
+END
+MaxPropRouter$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/MaxPropRouter$1.class
+END
+RoutingInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/RoutingInfo.java
+END
+EpidemicRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/EpidemicRouter.class
+END
+FirstContactRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/FirstContactRouter.java
+END
+SprayAndWaitRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/SprayAndWaitRouter.java
+END
+MessageRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/netsci/!svn/ver/6788/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/MessageRouter.class
+END
+EnergyAwareRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/EnergyAwareRouter.java
+END
+EventGeneratorRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6449/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/EventGeneratorRouter.class
+END
+MaxPropRouter$MaxPropComparator.class
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/MaxPropRouter$MaxPropComparator.class
+END
+DirectDeliveryRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/DirectDeliveryRouter.java
+END
+EpidemicRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/EpidemicRouter.java
+END
+RoutingInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/RoutingInfo.class
+END
+MaxPropRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/MaxPropRouter.java
+END
+MaxPropRouter$MaxPropTupleComparator.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/MaxPropRouter$MaxPropTupleComparator.class
+END
+SprayAndWaitRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/SprayAndWaitRouter.class
+END
+MessageRouter$1.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/MessageRouter$1.class
+END
+ActiveRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/ActiveRouter.class
+END
+DirectDeliveryRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/DirectDeliveryRouter.class
+END
+CacheRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/netsci/!svn/ver/6788/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/CacheRouter.java
+END
+ProphetRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/ProphetRouter.class
+END
+PassiveRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/netsci/!svn/ver/6788/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/PassiveRouter.java
+END
+MaxPropRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/MaxPropRouter.class
+END
+ProphetRouter$TupleComparator.class
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/ProphetRouter$TupleComparator.class
+END
+ActiveRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/ActiveRouter.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/package.html
+END
+ProphetRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/ProphetRouter.java
+END
+MessageRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/netsci/!svn/ver/6788/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/MessageRouter.java
+END
+FirstContactRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/FirstContactRouter.class
+END
+EventGeneratorRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6449/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/EventGeneratorRouter.java
+END
+EnergyAwareRouter.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/routing/EnergyAwareRouter.class
+END

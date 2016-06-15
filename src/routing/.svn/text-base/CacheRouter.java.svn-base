@@ -1,0 +1,405 @@
+package routing;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+import cache.CacheConstants;
+import cache.DALFUCache;
+import cache.DataObject;
+import cache.DiversityCache;
+import cache.DropTailCache;
+import cache.ExactDiversityCache;
+import cache.LFUCache;
+import cache.LRUCache;
+import cache.LRU_KCache;
+import cache.ObjectCache;
+import cache.Query;
+import cache.QueryResult;
+import cache.RandomDropCache;
+import core.Connection;
+import core.DTNHost;
+import core.Message;
+import core.Settings;
+import core.SimClock;
+import core.Tuple;
+
+public class CacheRouter extends ProphetRouter {
+	ObjectCache cache;
+	private static final String CACHE_SIZE = "cacheSize";
+	private static final String CACHE_TYPE = "cacheType";
+	private static final String QUERY_LIFE_TIME = "QueryLifeTime";
+	private static final String CACHE_ENABLED = "cacheEnabled";
+	private static final String COVERAGE = "coverageBasedUtil";
+	
+	public static boolean coverageBasedUtil = false;
+	
+	private Map<Query, List<DataObject>> queryResults = new HashMap<Query, List<DataObject>>();
+	private int queryCreated = 0;
+	
+	int cacheSize = 0;
+	String cacheType="none";
+	boolean cacheEnabled = false;
+	
+	List<Query> queries = new ArrayList<Query>();
+	
+	Random rng = new Random(100);
+	
+	public CacheRouter(ProphetRouter r) {
+		super(r);
+	}
+	
+	public CacheRouter(Settings s) {
+		super(s);
+		
+		if (s.contains(CACHE_TYPE))
+			this.cacheType = s.getSetting(CACHE_TYPE);
+		if (s.contains(CACHE_SIZE))
+			this.cacheSize = s.getInt(CACHE_SIZE);
+		if (s.contains(QUERY_LIFE_TIME))
+			Query.lifetime = s.getDouble(QUERY_LIFE_TIME);
+		if (s.contains(CACHE_ENABLED))
+			this.cacheEnabled = s.getBoolean(CACHE_ENABLED);
+		if (s.contains(COVERAGE))
+			CacheRouter.coverageBasedUtil = s.getBoolean(COVERAGE);
+	}
+	
+	public CacheRouter replicate() {
+		CacheRouter cr = new CacheRouter(this);
+		cr.cacheType = this.cacheType;
+		cr.cacheEnabled = this.cacheEnabled;
+		cr.cacheSize = this.cacheSize;
+		
+		if (cacheType.equals("Diversity")) {
+			if (coverageBasedUtil)
+				cr.cache = new ExactDiversityCache();
+			else
+				cr.cache = new DiversityCache();
+		}
+		else if (cacheType.equals("LFU"))
+			cr.cache = new LFUCache();
+		else if (cacheType.equals("LRU"))
+			cr.cache = new LRUCache();
+		else if (cacheType.endsWith("LRUK"))
+			cr.cache = new LRU_KCache();
+		else if (cacheType.equals("Random"))
+			cr.cache = new RandomDropCache();
+		else if (cacheType.equals("DropTail"))
+			cr.cache = new DropTailCache();
+		else if (cacheType.equals("ExactDiversity"))
+			cr.cache = new ExactDiversityCache();
+		else if (cacheType.equals("DALRU"))
+			cr.cache = new DALFUCache();
+		else if (cacheType.equals("DALFU"))
+			cr.cache = new DALFUCache();
+		
+		cr.cache.setMaxSize(cr.cacheSize);
+		
+		return cr;
+	}
+
+	public void update() {
+		super.update();
+		
+		if (SimClock.getIntTime() % 1000 == 0)
+			if (cacheEnabled)
+					cache.update();
+	}
+	
+	private boolean isCacheEnabled() {
+		return cacheEnabled;
+	}
+	
+	
+	@Override
+	public void changedConnection(Connection con) {
+		// TODO Auto-generated method stub
+		super.changedConnection(con);
+		if (con.isUp()) {			
+			CacheRouter otherRouter = (CacheRouter)con.getOtherNode(getHost()).getRouter();
+			for (Iterator<Query> it = otherRouter.getQueries().iterator(); it.hasNext();) {
+				Query q = it.next();
+				if (getQueries().contains(q) == false) {					
+					getQueries().add(q);
+					
+					/* Handle the query if the host is a cache */
+					if (isCacheEnabled())
+						handleIncomingQuery(q);
+				}
+			}			
+			//System.out.println(SimClock.getIntTime() + " Queries "  + getQueries().size() + " --> " + getHost());
+			
+			for (Iterator<Query> it = getQueries().iterator(); it.hasNext();) {
+				Query q = it.next();
+				if (SimClock.getTime() - q.originalQuery.getCreationTime() > Query.lifetime)
+					q.stale = true;
+			}
+		}			
+	}
+	
+	public List<Query> getQueries() {
+		if (isCacheEnabled())
+			return this.cache.queries;
+		else
+			return this.queries;
+	}
+	
+	private void handleIncomingDataObject(Message m) {		
+		DataObject obj;
+		
+		if (m instanceof QueryResult) {
+			String id = m.getId().split("\\+")[1];
+			obj = new DataObject(m.getFrom(), m.getTo(), id, m.getSize(), m.getProperties());			
+		}
+		else 
+			obj = new DataObject(m.replicate()); 
+		
+		if (cache.contains(obj) == false) {		
+			
+			while (cache.getSize() > 0 && cache.isFull()) {
+				cache.dropObject();
+			}
+			
+			cache.addNewObject(obj);
+			
+			// Return against any outstanding (non-stale) queries, if satisfied by this new object
+			for (Query q : getQueries()) {				
+				if (!q.stale && q.isSatisfied(obj)) {
+					System.out.println(SimClock.getTime() + " Query-cache-reply2 " + q.getId().split("-")[0] + " " + q.rangeStart + " " + q.rangeEnd + " " + obj.getGroupId() + " " +obj);
+					QueryResult nm = new QueryResult(getHost(), q.getFrom(), q.getId() + "+" + obj.getId(), obj.getSize(), obj.getProperties());
+					nm.query = q;
+					createNewMessage(nm);
+				}					
+			}
+		}
+		
+		//System.out.println("Size " + this.cache.getSize());
+		//System.out.println(this.getHost());
+		//System.out.println(this.cache);
+	}
+	
+	private void handleIncomingQuery(Message m) {
+		Query q;
+		boolean queryFromSource = true;
+		
+		//System.out.println(SimClock.getTime() + " Got query " + m + " " + m.getCreationTime());
+		
+		if (m instanceof Query) {/* Received from another cache; respond */ 
+			q = (Query)m;
+			q.originalQuery = m;
+			queryFromSource = false;
+			//System.out.println(SimClock.getTime() + " Got query (cache)" + m + " " + m.getCreationTime() + " " + q.originalQuery.getCreationTime());
+		}
+		else { 			
+			/* Query from the source; store in the query table */			
+			q = new Query(m.getFrom(), m.getTo(), m.getId(), m.getSize(), m.getProperties());			
+			q.originalQuery = m;
+			
+			/* Add to the query list */
+			if (!getQueries().contains(q))
+				getQueries().add(q);
+		}
+		
+		String range = q.getId().split("\\|")[1];		
+		int a = Integer.parseInt(range.split(",")[0].trim());
+		int b = Integer.parseInt(range.split(",")[1].trim());
+		
+		q.setRange(a,b);
+		
+		List<DataObject> resultSet = cache.findQueryResult(q);
+		
+		for (DataObject o : resultSet) {
+			//System.out.println(SimClock.getTime() + " Query-cache-reply " + q.getId().split("-")[0] + " " + q.rangeStart + " " + q.rangeEnd + " " + o.getGroupId() + " " +o); // + " " +  getHost() +"->" + q.getFrom());		
+			
+			QueryResult nm = new QueryResult(getHost(), q.getFrom(), q.getId() + "+" + o.getId(), o.getSize(), o.getProperties());	
+			nm.query = q;			
+			createNewMessage(nm);
+		}		
+		
+		if (queryFromSource && resultSet.size() > 0) {
+			System.out.println(SimClock.getTime() + " Cache-hit " + q.getId().split("-")[0]);
+		}
+	}
+	
+	private void handleQueryResult(Message m) {
+		// m.id = 10:44-Q|37,43|+43:10+R
+		// qid = 10:44
+		// a = 37
+		// b = 43
+		// group = 43
+		
+		//System.out.println("Resultset " + m + " recv " + getHost());
+		
+		// Data object received by a cache, add as a new object		
+		if (isCacheEnabled()) {
+			
+			handleIncomingDataObject(m);	
+			return;
+		}
+				
+		QueryResult qr = (QueryResult)m;
+		
+		/* If the query was originally from this host, get the result */
+		if (qr.query.getFrom() == getHost()) {			
+			Query q = qr.query;
+			if (!queryResults.containsKey(q))
+				queryResults.put(q, new ArrayList<DataObject>());
+			queryResults.get(q).add(new DataObject(m.getFrom(), m.getTo(), m.getId().split("\\+")[1], m.getSize(), m.getProperties()));
+			
+			// Data received by the query generator		
+			String qId = m.getId().split("-")[0];
+			StringTokenizer st = new StringTokenizer(m.getId(), "|");
+			st.nextToken();
+			String range = st.nextToken();
+			int a = Integer.parseInt(range.split(",")[0]);
+			int b = Integer.parseInt(range.split(",")[1]);
+			String group = m.getId().split("\\+")[1].split(":")[0];
+			
+			//System.out.println(SimClock.getIntTime() + " Query-result " + qId + " " + a + " " + b + " " + group + " " + m + " " + qr.query.originalQuery.getCreationTime());
+		}
+	}
+
+	
+	@Override
+	public Message messageTransferred(String id, DTNHost from) {
+		// TODO Auto-generated method stub
+		
+		Message m = super.messageTransferred(id, from);
+		
+		//System.out.println(SimClock.getIntTime() + " " + id + " from " + from  + " to " + getHost());
+		
+		if (isCacheEnabled() || m.getTo() == getHost()) {		
+			if (m.getId().contains("+"))
+				handleQueryResult(m);
+			else if (m.getId().contains("Q")) {
+				// It is a query and not already in the query table
+				boolean gotIt = false;
+				for (Query q: queries)
+					if (q.getId().equals(m.getId())) {
+						gotIt = true;
+						break;
+					}
+				if (!gotIt)
+					handleIncomingQuery(m);			
+			}
+			else
+				handleIncomingDataObject(m);
+		}
+		
+		return m;
+	}
+
+	
+	@Override
+	public boolean createNewMessage(Message m) {
+		// TODO Auto-generated method stub
+		boolean result = super.createNewMessage(m);
+		
+		String nodeSource = ""+ m.getFrom();
+		
+		if (m.getId().contains("Q") == false && nodeSource.startsWith("v") ) { // Data message
+			int neighborhood = Integer.parseInt(nodeSource.substring(1, 2));			
+			int x = CacheConstants.xlocs[neighborhood] + ((rng.nextDouble() > 0.5) ? 1 : -1) * rng.nextInt(CacheConstants.neighboorRadius/2);
+			int y = CacheConstants.ylocs[neighborhood] + ((rng.nextDouble() > 0.5) ? 1 : -1) * rng.nextInt(CacheConstants.neighboorRadius/2);
+			m.addProperty("loc", new Tuple<Integer, Integer>(x, y));
+		}
+		else if (m.getId().contains("Q") && m.getId().contains("+") == false) { // Query message 
+			
+			queryCreated++;
+			
+			String id = m.getId().split("-")[0];
+			int x, y, r;
+			
+			if (CacheConstants.queryRadius.containsKey(id)) {
+				x = CacheConstants.queryCenterXs.get(id);
+				y = CacheConstants.queryCenterYs.get(id);
+				r = CacheConstants.queryRadius.get(id);
+			}
+			else {
+				int neighborhood = CacheConstants.rng.nextInt(5);
+				x = CacheConstants.xlocs[neighborhood] + 
+						((CacheConstants.rng.nextDouble() > 0.5)? 1 : -1) * CacheConstants.rng.nextInt(CacheConstants.neighboorRadius/2);
+				y = CacheConstants.ylocs[neighborhood] + 
+						((CacheConstants.rng.nextDouble() > 0.5)? 1 : -1) * CacheConstants.rng.nextInt(CacheConstants.neighboorRadius/2);
+				r = CacheConstants.overlapDistance + CacheConstants.rng.nextInt(CacheConstants.neighboorRadius);
+				
+				CacheConstants.queryCenterXs.put(id, x);
+				CacheConstants.queryCenterYs.put(id, y);
+				CacheConstants.queryRadius.put(id, r);
+			}
+			
+			m.addProperty("centerX", x);
+			m.addProperty("centerY", y);
+			m.addProperty("radius", r);
+		}
+		
+		return result;
+	}
+	
+	public void simEnded() {		
+		//System.out.println("Status of " + getHost());
+		double util = 0;
+		int totalObjects = 0;
+		
+		if (queryResults.size() > 0) {
+			for(Map.Entry<Query, List<DataObject>> e : queryResults.entrySet()) {
+				List<DataObject> results = e.getValue();
+				totalObjects += results.size();
+				
+				Collections.sort(results, new Comparator<DataObject>() {
+					public int compare(DataObject o1, DataObject o2) {
+						return (o1.getGroupId() - o2.getGroupId());
+					}
+				});
+				
+				System.out.println(getHost() + " Query " + e.getKey());
+				
+				if (coverageBasedUtil) {
+					int overlaps = 0;
+					for (DataObject o1 : results)
+						for(DataObject o2 : results)
+							if (!o1.equals(o2))
+								overlaps += cache.doesOverlap(o1, o2) ? 1 : 0;
+					
+					double u = results.size() * results.size() / (results.size() + overlaps);
+					System.out.println("Query " + e.getKey() + " resul " + results.size() + " util " + u + " overlaps " + overlaps);
+					util += u;
+				}
+				else {
+					
+					double u = 0, du = 0;
+					int match = -1;
+					for(DataObject o : results) {
+						if (o.getGroupId() != match) { du = 1; u += du; match = o.getGroupId();}
+						else { du *= 0.5; u += du; }
+					}
+					
+					//System.out.println("Query " + e.getKey() + " resul " + results.size() + " util " + u + " overlaps " + 0);
+					util += u;
+				}				
+			}	
+			
+			//util /= queryResults.size();
+		}
+		
+		//System.out.println(getHost() + " " + cache.objects);
+		
+		Set<Integer> uniqObjs = new HashSet<Integer>();		
+		if (isCacheEnabled()) {			
+			for (DataObject o : cache.getObjects()) 
+				uniqObjs.add(o.getGroupId());
+		}
+		
+		System.out.println("Status " + getHost() + " Cache " + cacheEnabled + " QueryCreated " + queryCreated 
+				+ " QueryServed " + queryResults.size() + "  QueryUtil " + util + " Clusters " + uniqObjs.size() + 
+				" Cachedobjects " + cache.objects.size() + " ReceivedObjects " + totalObjects);
+	}
+}

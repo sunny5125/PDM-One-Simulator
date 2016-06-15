@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report
+END
+MessageDelayReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageDelayReport.java
+END
+ContactsDuringAnICTReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ContactsDuringAnICTReport.java
+END
+ContactsPerHourReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ContactsPerHourReport.class
+END
+MessageDeliveryReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageDeliveryReport.class
+END
+UniqueEncountersReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/UniqueEncountersReport.java
+END
+MovementNs2Report.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MovementNs2Report.java
+END
+ConnectivityDtnsim2Report.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ConnectivityDtnsim2Report.java
+END
+Report.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/Report.java
+END
+AdjacencyGraphvizReport$ConnectionInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/AdjacencyGraphvizReport$ConnectionInfo.class
+END
+EnergyLevelReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/EnergyLevelReport.java
+END
+InterContactTimesReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/InterContactTimesReport.class
+END
+MessageDelayReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageDelayReport.class
+END
+MessageDeliveryReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageDeliveryReport.java
+END
+TotalEncountersReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/TotalEncountersReport.java
+END
+EncountersVSUniqueEncountersReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/EncountersVSUniqueEncountersReport.java
+END
+DeliveredMessagesReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/DeliveredMessagesReport.java
+END
+ContactTimesReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ContactTimesReport.java
+END
+MessageGraphvizReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageGraphvizReport.java
+END
+MovementNs2Report.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MovementNs2Report.class
+END
+TotalContactTimeReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/TotalContactTimeReport.class
+END
+ConnectivityDtnsim2Report.class
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ConnectivityDtnsim2Report.class
+END
+MessageStatsReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageStatsReport.java
+END
+Report.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/Report.class
+END
+ConnectivityONEReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ConnectivityONEReport.class
+END
+EnergyLevelReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/EnergyLevelReport.class
+END
+DistanceDelayReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/DistanceDelayReport.java
+END
+MessageLocationReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageLocationReport.java
+END
+TotalEncountersReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/TotalEncountersReport.class
+END
+TotalContactTimeReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/TotalContactTimeReport.java
+END
+EncountersVSUniqueEncountersReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/EncountersVSUniqueEncountersReport.class
+END
+DeliveredMessagesReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/DeliveredMessagesReport.class
+END
+AdjacencyGraphvizReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/AdjacencyGraphvizReport.class
+END
+ConnectivityONEReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ConnectivityONEReport.java
+END
+ContactTimesReport$ConnectionInfo.class
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ContactTimesReport$ConnectionInfo.class
+END
+ContactTimesReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ContactTimesReport.class
+END
+DTN2Reporter.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/DTN2Reporter.class
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/package.html
+END
+MessageGraphvizReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageGraphvizReport.class
+END
+ContactsPerHourReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ContactsPerHourReport.java
+END
+DistanceDelayReport$InfoTuple.class
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/DistanceDelayReport$InfoTuple.class
+END
+MessageStatsReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageStatsReport.class
+END
+ContactsDuringAnICTReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/ContactsDuringAnICTReport.class
+END
+AdjacencyGraphvizReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/AdjacencyGraphvizReport.java
+END
+DistanceDelayReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/DistanceDelayReport.class
+END
+DTN2Reporter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/DTN2Reporter.java
+END
+InterContactTimesReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/InterContactTimesReport.java
+END
+UniqueEncountersReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/UniqueEncountersReport.class
+END
+MessageLocationReport.class
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/report/MessageLocationReport.class
+END

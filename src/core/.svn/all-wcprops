@@ -1,0 +1,299 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core
+END
+Connection.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Connection.java
+END
+ParetoRNG.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ParetoRNG.java
+END
+SimError.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/SimError.java
+END
+Coord.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Coord.java
+END
+DTNHost.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/DTNHost.class
+END
+Message.class
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/netsci/!svn/ver/6788/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Message.class
+END
+ModuleCommunicationBus.class
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ModuleCommunicationBus.class
+END
+NetworkLayer.class
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/NetworkLayer.class
+END
+Debug.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Debug.class
+END
+World.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/World.class
+END
+UpdateListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/UpdateListener.class
+END
+Tuple.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Tuple.class
+END
+ModuleCommunicationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ModuleCommunicationListener.java
+END
+ConnectivityGrid$GridCell.class
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ConnectivityGrid$GridCell.class
+END
+DTNSim.class
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/DTNSim.class
+END
+Connection.class
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Connection.class
+END
+Settings.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Settings.class
+END
+Message.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/netsci/!svn/ver/6788/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Message.java
+END
+MovementListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/MovementListener.class
+END
+ParetoRNG.class
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ParetoRNG.class
+END
+DTN2Manager.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/DTN2Manager.class
+END
+Debug.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Debug.java
+END
+NetworkLayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/NetworkLayer.java
+END
+UpdateListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/UpdateListener.java
+END
+SimClock.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/SimClock.class
+END
+SettingsError.class
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/SettingsError.class
+END
+DTNSim.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/DTNSim.java
+END
+SimScenario.class
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/SimScenario.class
+END
+Settings.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Settings.java
+END
+MovementListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/MovementListener.java
+END
+DTN2Manager.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/DTN2Manager.java
+END
+SimClock.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/SimClock.java
+END
+ModuleCommunicationListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ModuleCommunicationListener.class
+END
+ConnectionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ConnectionListener.java
+END
+ConnectivityGrid.class
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ConnectivityGrid.class
+END
+DTN2Manager$EIDHost.class
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/DTN2Manager$EIDHost.class
+END
+SettingsError.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/SettingsError.java
+END
+SimScenario.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/SimScenario.java
+END
+MessageListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/MessageListener.class
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/package.html
+END
+DTNHost.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/DTNHost.java
+END
+ConnectivityGrid.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ConnectivityGrid.java
+END
+ModuleCommunicationBus.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ModuleCommunicationBus.java
+END
+SimError.class
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/SimError.class
+END
+World.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/World.java
+END
+ConnectionListener.class
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/ConnectionListener.class
+END
+Tuple.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Tuple.java
+END
+MessageListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/MessageListener.java
+END
+Coord.class
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/netsci/!svn/ver/6087/experimentation/src/trunk/diversity-caching/One-BBN/src/core/Coord.class
+END
